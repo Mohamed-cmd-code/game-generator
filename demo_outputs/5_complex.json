@@ -1,0 +1,213 @@
+{
+  "prompt": "Treasure hunt in the V-Shop, hard, 8 objects including headphones and a smartphone, 4 minutes, 6 hints, and a card at the end.",
+  "response": {
+    "status": "adapted",
+    "game_id": "game_f55cc746a1e1",
+    "message": "",
+    "config": {
+      "schema_version": "1.0",
+      "game_template": "treasure_hunt",
+      "environment": "v_shop",
+      "duration_seconds": 180,
+      "difficulty": "hard",
+      "objects": [
+        {
+          "asset_id": "smartphone_01",
+          "score": 40,
+          "question": null
+        },
+        {
+          "asset_id": "headphones_01",
+          "score": 35,
+          "question": null
+        },
+        {
+          "asset_id": "book_02",
+          "score": 25,
+          "question": null
+        },
+        {
+          "asset_id": "red_shoe_01",
+          "score": 10,
+          "question": null
+        },
+        {
+          "asset_id": "teddy_bear_01",
+          "score": 15,
+          "question": null
+        },
+        {
+          "asset_id": "backpack_01",
+          "score": 20,
+          "question": null
+        }
+      ],
+      "hints": {
+        "enabled": true,
+        "max_hints": 5
+      },
+      "win_condition": {
+        "type": "reach_treasure"
+      },
+      "reward": {
+        "type": "card",
+        "reward_id": "demo_card_01"
+      }
+    },
+    "unity_config": {
+      "schema_version": "1.0",
+      "catalog_version": "1.0.0",
+      "game_id": "game_f55cc746a1e1",
+      "game_template": "treasure_hunt",
+      "environment": {
+        "id": "v_shop",
+        "scene_path": "Scenes/VShop_01"
+      },
+      "duration_seconds": 180,
+      "difficulty": "hard",
+      "objects": [
+        {
+          "asset_id": "smartphone_01",
+          "prefab_path": "Prefabs/Items/Smartphone",
+          "difficulty": "medium",
+          "score": 40,
+          "order": 1,
+          "question": null
+        },
+        {
+          "asset_id": "headphones_01",
+          "prefab_path": "Prefabs/Items/Headphones",
+          "difficulty": "medium",
+          "score": 35,
+          "order": 2,
+          "question": null
+        },
+        {
+          "asset_id": "book_02",
+          "prefab_path": "Prefabs/Items/Book",
+          "difficulty": "easy",
+          "score": 25,
+          "order": 3,
+          "question": null
+        },
+        {
+          "asset_id": "red_shoe_01",
+          "prefab_path": "Prefabs/Items/RedShoe",
+          "difficulty": "easy",
+          "score": 10,
+          "order": 4,
+          "question": null
+        },
+        {
+          "asset_id": "teddy_bear_01",
+          "prefab_path": "Prefabs/Items/TeddyBear",
+          "difficulty": "easy",
+          "score": 15,
+          "order": 5,
+          "question": null
+        },
+        {
+          "asset_id": "backpack_01",
+          "prefab_path": "Prefabs/Items/Backpack",
+          "difficulty": "easy",
+          "score": 20,
+          "order": 6,
+          "question": null
+        }
+      ],
+      "max_score": 145,
+      "hints": {
+        "enabled": true,
+        "max_hints": 5
+      },
+      "win_condition": {
+        "type": "reach_treasure"
+      },
+      "reward": {
+        "type": "card",
+        "reward_id": "demo_card_01"
+      }
+    },
+    "assumptions": [
+      "Used default reward card as none was explicitly changed."
+    ],
+    "adaptations": [
+      "Requested duration 240s exceeds max 180s; set to 180s.",
+      "Requested hints 6 exceeds max 5; set to 5 hints and enabled hints.",
+      "Requested 8 objects but only 6 distinct assets are available in V-Shop; reduced to 6 objects."
+    ],
+    "personalization": [],
+    "alternatives": [],
+    "errors": [],
+    "meta": {
+      "model": "openai/gpt-oss-120b",
+      "attempts": 2,
+      "rejected_by": null,
+      "latency_ms": 54543,
+      "retrieval": {
+        "backend": "tfidf-char-ngrams",
+        "templates": [
+          {
+            "id": "treasure_hunt",
+            "score": 0.512,
+            "keyword_match": true
+          },
+          {
+            "id": "hidden_objects",
+            "score": 0.355,
+            "keyword_match": true
+          },
+          {
+            "id": "quiz_hunt",
+            "score": 0.157,
+            "keyword_match": false
+          }
+        ],
+        "environments": [
+          {
+            "id": "v_shop",
+            "score": 0.371,
+            "keyword_match": true
+          },
+          {
+            "id": "park",
+            "score": 0.05,
+            "keyword_match": false
+          },
+          {
+            "id": "bedroom",
+            "score": 0.017,
+            "keyword_match": false
+          }
+        ],
+        "assets": [
+          {
+            "id": "smartphone_01",
+            "score": 0.563,
+            "keyword_match": true
+          },
+          {
+            "id": "headphones_01",
+            "score": 0.538,
+            "keyword_match": true
+          },
+          {
+            "id": "book_02",
+            "score": 0.093,
+            "keyword_match": false
+          },
+          {
+            "id": "key_01",
+            "score": 0.045,
+            "keyword_match": false
+          },
+          {
+            "id": "red_shoe_01",
+            "score": 0.024,
+            "keyword_match": false
+          }
+        ]
+      }
+    }
+  }
+}

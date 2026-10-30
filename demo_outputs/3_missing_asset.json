@@ -1,0 +1,175 @@
+{
+  "prompt": "Hidden objects in the park: find a guitar, a cat and a key.",
+  "response": {
+    "status": "adapted",
+    "game_id": "game_f0eecd63d753",
+    "message": "",
+    "config": {
+      "schema_version": "1.0",
+      "game_template": "hidden_objects",
+      "environment": "park",
+      "duration_seconds": 120,
+      "difficulty": "medium",
+      "objects": [
+        {
+          "asset_id": "teddy_bear_01",
+          "score": 20,
+          "question": null
+        },
+        {
+          "asset_id": "red_shoe_01",
+          "score": 20,
+          "question": null
+        },
+        {
+          "asset_id": "key_01",
+          "score": 80,
+          "question": null
+        }
+      ],
+      "hints": {
+        "enabled": true,
+        "max_hints": 2
+      },
+      "win_condition": {
+        "type": "find_all_objects"
+      },
+      "reward": {
+        "type": "card",
+        "reward_id": "demo_card_01"
+      }
+    },
+    "unity_config": {
+      "schema_version": "1.0",
+      "catalog_version": "1.0.0",
+      "game_id": "game_f0eecd63d753",
+      "game_template": "hidden_objects",
+      "environment": {
+        "id": "park",
+        "scene_path": "Scenes/Park_01"
+      },
+      "duration_seconds": 120,
+      "difficulty": "medium",
+      "objects": [
+        {
+          "asset_id": "teddy_bear_01",
+          "prefab_path": "Prefabs/Items/TeddyBear",
+          "difficulty": "easy",
+          "score": 20,
+          "order": 1,
+          "question": null
+        },
+        {
+          "asset_id": "red_shoe_01",
+          "prefab_path": "Prefabs/Items/RedShoe",
+          "difficulty": "easy",
+          "score": 20,
+          "order": 2,
+          "question": null
+        },
+        {
+          "asset_id": "key_01",
+          "prefab_path": "Prefabs/Items/Key",
+          "difficulty": "hard",
+          "score": 80,
+          "order": 3,
+          "question": null
+        }
+      ],
+      "max_score": 120,
+      "hints": {
+        "enabled": true,
+        "max_hints": 2
+      },
+      "win_condition": {
+        "type": "find_all_objects"
+      },
+      "reward": {
+        "type": "card",
+        "reward_id": "demo_card_01"
+      }
+    },
+    "assumptions": [
+      "Used default duration of 120 seconds.",
+      "Set difficulty to default medium.",
+      "Enabled hints with max 2 as per defaults."
+    ],
+    "adaptations": [
+      "Guitar is not in the catalogue; replaced by Teddy Bear (available in the Park).",
+      "Cat is not in the catalogue; replaced by Red Shoe (available in the Park)."
+    ],
+    "personalization": [],
+    "alternatives": [],
+    "errors": [],
+    "meta": {
+      "model": "openai/gpt-oss-120b",
+      "attempts": 1,
+      "rejected_by": null,
+      "latency_ms": 12403,
+      "retrieval": {
+        "backend": "tfidf-char-ngrams",
+        "templates": [
+          {
+            "id": "hidden_objects",
+            "score": 0.677,
+            "keyword_match": true
+          },
+          {
+            "id": "quiz_hunt",
+            "score": 0.14,
+            "keyword_match": false
+          },
+          {
+            "id": "treasure_hunt",
+            "score": 0.033,
+            "keyword_match": false
+          }
+        ],
+        "environments": [
+          {
+            "id": "park",
+            "score": 0.433,
+            "keyword_match": true
+          },
+          {
+            "id": "bedroom",
+            "score": 0.017,
+            "keyword_match": false
+          },
+          {
+            "id": "v_shop",
+            "score": 0.016,
+            "keyword_match": false
+          }
+        ],
+        "assets": [
+          {
+            "id": "key_01",
+            "score": 0.46,
+            "keyword_match": true
+          },
+          {
+            "id": "smartphone_01",
+            "score": 0.12,
+            "keyword_match": false
+          },
+          {
+            "id": "headphones_01",
+            "score": 0.026,
+            "keyword_match": false
+          },
+          {
+            "id": "teddy_bear_01",
+            "score": 0.025,
+            "keyword_match": false
+          },
+          {
+            "id": "red_shoe_01",
+            "score": 0.013,
+            "keyword_match": false
+          }
+        ]
+      }
+    }
+  }
+}

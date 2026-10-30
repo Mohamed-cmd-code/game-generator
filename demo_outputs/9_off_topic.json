@@ -1,0 +1,89 @@
+{
+  "prompt": "Write me a poem about the ocean.",
+  "response": {
+    "status": "rejected",
+    "game_id": null,
+    "message": "This request does not match any supported game type or environment.",
+    "config": null,
+    "unity_config": null,
+    "assumptions": [],
+    "adaptations": [],
+    "personalization": [],
+    "alternatives": [
+      "Hidden Objects in the Bedroom / V-Shop / Park: find items before the timer ends",
+      "Treasure Hunt: follow clues through the Park or the V-Shop to reach a treasure",
+      "Quiz Hunt: answer questions about objects found in the Bedroom"
+    ],
+    "errors": [],
+    "meta": {
+      "model": "openai/gpt-oss-120b",
+      "attempts": 0,
+      "rejected_by": "relevance_gate",
+      "latency_ms": 0,
+      "retrieval": {
+        "backend": "tfidf-char-ngrams",
+        "templates": [
+          {
+            "id": "hidden_objects",
+            "score": 0.127,
+            "keyword_match": false
+          },
+          {
+            "id": "treasure_hunt",
+            "score": 0.073,
+            "keyword_match": false
+          },
+          {
+            "id": "quiz_hunt",
+            "score": 0.0,
+            "keyword_match": false
+          }
+        ],
+        "environments": [
+          {
+            "id": "bedroom",
+            "score": 0.0,
+            "keyword_match": false
+          },
+          {
+            "id": "v_shop",
+            "score": 0.0,
+            "keyword_match": false
+          },
+          {
+            "id": "park",
+            "score": 0.0,
+            "keyword_match": false
+          }
+        ],
+        "assets": [
+          {
+            "id": "red_shoe_01",
+            "score": 0.0,
+            "keyword_match": false
+          },
+          {
+            "id": "book_02",
+            "score": 0.0,
+            "keyword_match": false
+          },
+          {
+            "id": "teddy_bear_01",
+            "score": 0.0,
+            "keyword_match": false
+          },
+          {
+            "id": "backpack_01",
+            "score": 0.0,
+            "keyword_match": false
+          },
+          {
+            "id": "headphones_01",
+            "score": 0.0,
+            "keyword_match": false
+          }
+        ]
+      }
+    }
+  }
+}

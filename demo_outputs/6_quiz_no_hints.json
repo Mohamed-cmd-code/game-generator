@@ -1,0 +1,267 @@
+{
+  "prompt": "A quiz in the park, 30 seconds, no hints.",
+  "response": {
+    "status": "ok",
+    "game_id": "game_ee57d5f606d0",
+    "message": "",
+    "config": {
+      "schema_version": "1.0",
+      "game_template": "quiz_hunt",
+      "environment": "park",
+      "duration_seconds": 30,
+      "difficulty": "medium",
+      "objects": [
+        {
+          "asset_id": "book_02",
+          "score": 10,
+          "question": {
+            "text": "What do you read to learn new things?",
+            "choices": [
+              "A book",
+              "A shoe"
+            ],
+            "correct_index": 0
+          }
+        },
+        {
+          "asset_id": "red_shoe_01",
+          "score": 20,
+          "question": {
+            "text": "What do you wear on your foot to run?",
+            "choices": [
+              "A shoe",
+              "A hat"
+            ],
+            "correct_index": 0
+          }
+        },
+        {
+          "asset_id": "teddy_bear_01",
+          "score": 30,
+          "question": {
+            "text": "Which cuddly toy is often brown and soft?",
+            "choices": [
+              "A teddy bear",
+              "A smartphone"
+            ],
+            "correct_index": 0
+          }
+        },
+        {
+          "asset_id": "smartphone_01",
+          "score": 40,
+          "question": {
+            "text": "Which device lets you call friends?",
+            "choices": [
+              "A smartphone",
+              "A backpack"
+            ],
+            "correct_index": 0
+          }
+        },
+        {
+          "asset_id": "key_01",
+          "score": 80,
+          "question": {
+            "text": "What opens a locked door?",
+            "choices": [
+              "A key",
+              "A book"
+            ],
+            "correct_index": 0
+          }
+        }
+      ],
+      "hints": {
+        "enabled": false,
+        "max_hints": 0
+      },
+      "win_condition": {
+        "type": "answer_all_questions"
+      },
+      "reward": {
+        "type": "card",
+        "reward_id": "demo_card_01"
+      }
+    },
+    "unity_config": {
+      "schema_version": "1.0",
+      "catalog_version": "1.0.0",
+      "game_id": "game_ee57d5f606d0",
+      "game_template": "quiz_hunt",
+      "environment": {
+        "id": "park",
+        "scene_path": "Scenes/Park_01"
+      },
+      "duration_seconds": 30,
+      "difficulty": "medium",
+      "objects": [
+        {
+          "asset_id": "book_02",
+          "prefab_path": "Prefabs/Items/Book",
+          "difficulty": "easy",
+          "score": 10,
+          "order": 1,
+          "question": {
+            "text": "What do you read to learn new things?",
+            "choices": [
+              "A book",
+              "A shoe"
+            ],
+            "correct_index": 0
+          }
+        },
+        {
+          "asset_id": "red_shoe_01",
+          "prefab_path": "Prefabs/Items/RedShoe",
+          "difficulty": "easy",
+          "score": 20,
+          "order": 2,
+          "question": {
+            "text": "What do you wear on your foot to run?",
+            "choices": [
+              "A shoe",
+              "A hat"
+            ],
+            "correct_index": 0
+          }
+        },
+        {
+          "asset_id": "teddy_bear_01",
+          "prefab_path": "Prefabs/Items/TeddyBear",
+          "difficulty": "easy",
+          "score": 30,
+          "order": 3,
+          "question": {
+            "text": "Which cuddly toy is often brown and soft?",
+            "choices": [
+              "A teddy bear",
+              "A smartphone"
+            ],
+            "correct_index": 0
+          }
+        },
+        {
+          "asset_id": "smartphone_01",
+          "prefab_path": "Prefabs/Items/Smartphone",
+          "difficulty": "medium",
+          "score": 40,
+          "order": 4,
+          "question": {
+            "text": "Which device lets you call friends?",
+            "choices": [
+              "A smartphone",
+              "A backpack"
+            ],
+            "correct_index": 0
+          }
+        },
+        {
+          "asset_id": "key_01",
+          "prefab_path": "Prefabs/Items/Key",
+          "difficulty": "hard",
+          "score": 80,
+          "order": 5,
+          "question": {
+            "text": "What opens a locked door?",
+            "choices": [
+              "A key",
+              "A book"
+            ],
+            "correct_index": 0
+          }
+        }
+      ],
+      "max_score": 180,
+      "hints": {
+        "enabled": false,
+        "max_hints": 0
+      },
+      "win_condition": {
+        "type": "answer_all_questions"
+      },
+      "reward": {
+        "type": "card",
+        "reward_id": "demo_card_01"
+      }
+    },
+    "assumptions": [
+      "Difficulty set to default medium.",
+      "Object count set to default 5."
+    ],
+    "adaptations": [],
+    "personalization": [],
+    "alternatives": [],
+    "errors": [],
+    "meta": {
+      "model": "openai/gpt-oss-120b",
+      "attempts": 1,
+      "rejected_by": null,
+      "latency_ms": 24324,
+      "retrieval": {
+        "backend": "tfidf-char-ngrams",
+        "templates": [
+          {
+            "id": "quiz_hunt",
+            "score": 0.488,
+            "keyword_match": true
+          },
+          {
+            "id": "hidden_objects",
+            "score": 0.075,
+            "keyword_match": false
+          },
+          {
+            "id": "treasure_hunt",
+            "score": 0.021,
+            "keyword_match": false
+          }
+        ],
+        "environments": [
+          {
+            "id": "park",
+            "score": 0.477,
+            "keyword_match": true
+          },
+          {
+            "id": "v_shop",
+            "score": 0.01,
+            "keyword_match": false
+          },
+          {
+            "id": "bedroom",
+            "score": 0.0,
+            "keyword_match": false
+          }
+        ],
+        "assets": [
+          {
+            "id": "smartphone_01",
+            "score": 0.048,
+            "keyword_match": false
+          },
+          {
+            "id": "book_02",
+            "score": 0.025,
+            "keyword_match": false
+          },
+          {
+            "id": "headphones_01",
+            "score": 0.016,
+            "keyword_match": false
+          },
+          {
+            "id": "red_shoe_01",
+            "score": 0.0,
+            "keyword_match": false
+          },
+          {
+            "id": "teddy_bear_01",
+            "score": 0.0,
+            "keyword_match": false
+          }
+        ]
+      }
+    }
+  }
+}

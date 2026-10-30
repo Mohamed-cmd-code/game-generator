@@ -1,0 +1,202 @@
+{
+  "prompt": "Make a fun little game for my kid.",
+  "response": {
+    "status": "ok",
+    "game_id": "game_6cc2b3381130",
+    "message": "",
+    "config": {
+      "schema_version": "1.0",
+      "game_template": "hidden_objects",
+      "environment": "bedroom",
+      "duration_seconds": 120,
+      "difficulty": "medium",
+      "objects": [
+        {
+          "asset_id": "red_shoe_01",
+          "score": 15,
+          "question": null
+        },
+        {
+          "asset_id": "book_02",
+          "score": 20,
+          "question": null
+        },
+        {
+          "asset_id": "backpack_01",
+          "score": 25,
+          "question": null
+        },
+        {
+          "asset_id": "smartphone_01",
+          "score": 45,
+          "question": null
+        },
+        {
+          "asset_id": "key_01",
+          "score": 80,
+          "question": null
+        }
+      ],
+      "hints": {
+        "enabled": true,
+        "max_hints": 2
+      },
+      "win_condition": {
+        "type": "find_all_objects"
+      },
+      "reward": {
+        "type": "card",
+        "reward_id": "demo_card_01"
+      }
+    },
+    "unity_config": {
+      "schema_version": "1.0",
+      "catalog_version": "1.0.0",
+      "game_id": "game_6cc2b3381130",
+      "game_template": "hidden_objects",
+      "environment": {
+        "id": "bedroom",
+        "scene_path": "Scenes/Bedroom_01"
+      },
+      "duration_seconds": 120,
+      "difficulty": "medium",
+      "objects": [
+        {
+          "asset_id": "red_shoe_01",
+          "prefab_path": "Prefabs/Items/RedShoe",
+          "difficulty": "easy",
+          "score": 15,
+          "order": 1,
+          "question": null
+        },
+        {
+          "asset_id": "book_02",
+          "prefab_path": "Prefabs/Items/Book",
+          "difficulty": "easy",
+          "score": 20,
+          "order": 2,
+          "question": null
+        },
+        {
+          "asset_id": "backpack_01",
+          "prefab_path": "Prefabs/Items/Backpack",
+          "difficulty": "easy",
+          "score": 25,
+          "order": 3,
+          "question": null
+        },
+        {
+          "asset_id": "smartphone_01",
+          "prefab_path": "Prefabs/Items/Smartphone",
+          "difficulty": "medium",
+          "score": 45,
+          "order": 4,
+          "question": null
+        },
+        {
+          "asset_id": "key_01",
+          "prefab_path": "Prefabs/Items/Key",
+          "difficulty": "hard",
+          "score": 80,
+          "order": 5,
+          "question": null
+        }
+      ],
+      "max_score": 185,
+      "hints": {
+        "enabled": true,
+        "max_hints": 2
+      },
+      "win_condition": {
+        "type": "find_all_objects"
+      },
+      "reward": {
+        "type": "card",
+        "reward_id": "demo_card_01"
+      }
+    },
+    "assumptions": [
+      "Used default template hidden_objects",
+      "Used default environment bedroom",
+      "Set duration to default 120 seconds",
+      "Set difficulty to default medium",
+      "Created 5 objects as per default count",
+      "Enabled hints with default max 2",
+      "Added default reward demo_card_01"
+    ],
+    "adaptations": [],
+    "personalization": [],
+    "alternatives": [],
+    "errors": [],
+    "meta": {
+      "model": "openai/gpt-oss-120b",
+      "attempts": 1,
+      "rejected_by": null,
+      "latency_ms": 1791,
+      "retrieval": {
+        "backend": "tfidf-char-ngrams",
+        "templates": [
+          {
+            "id": "quiz_hunt",
+            "score": 0.031,
+            "keyword_match": false
+          },
+          {
+            "id": "hidden_objects",
+            "score": 0.02,
+            "keyword_match": false
+          },
+          {
+            "id": "treasure_hunt",
+            "score": 0.0,
+            "keyword_match": false
+          }
+        ],
+        "environments": [
+          {
+            "id": "bedroom",
+            "score": 0.574,
+            "keyword_match": true
+          },
+          {
+            "id": "v_shop",
+            "score": 0.0,
+            "keyword_match": false
+          },
+          {
+            "id": "park",
+            "score": 0.0,
+            "keyword_match": false
+          }
+        ],
+        "assets": [
+          {
+            "id": "red_shoe_01",
+            "score": 0.017,
+            "keyword_match": false
+          },
+          {
+            "id": "smartphone_01",
+            "score": 0.017,
+            "keyword_match": false
+          },
+          {
+            "id": "book_02",
+            "score": 0.0,
+            "keyword_match": false
+          },
+          {
+            "id": "teddy_bear_01",
+            "score": 0.0,
+            "keyword_match": false
+          },
+          {
+            "id": "backpack_01",
+            "score": 0.0,
+            "keyword_match": false
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "prompt": "Create a game in a messy bedroom. The player must find 5 objects in less than 3 minutes. Harder objects should give more points. Add 3 hints and a reward at the end.",
+  "response": {
+    "status": "ok",
+    "game_id": "game_c76e861c3392",
+    "message": "",
+    "config": {
+      "schema_version": "1.0",
+      "game_template": "hidden_objects",
+      "environment": "bedroom",
+      "duration_seconds": 180,
+      "difficulty": "medium",
+      "objects": [
+        {
+          "asset_id": "red_shoe_01",
+          "score": 20,
+          "question": null
+        },
+        {
+          "asset_id": "teddy_bear_01",
+          "score": 25,
+          "question": null
+        },
+        {
+          "asset_id": "headphones_01",
+          "score": 45,
+          "question": null
+        },
+        {
+          "asset_id": "smartphone_01",
+          "score": 55,
+          "question": null
+        },
+        {
+          "asset_id": "key_01",
+          "score": 80,
+          "question": null
+        }
+      ],
+      "hints": {
+        "enabled": true,
+        "max_hints": 3
+      },
+      "win_condition": {
+        "type": "find_all_objects"
+      },
+      "reward": {
+        "type": "card",
+        "reward_id": "demo_card_01"
+      }
+    },
+    "unity_config": {
+      "schema_version": "1.0",
+      "catalog_version": "1.0.0",
+      "game_id": "game_c76e861c3392",
+      "game_template": "hidden_objects",
+      "environment": {
+        "id": "bedroom",
+        "scene_path": "Scenes/Bedroom_01"
+      },
+      "duration_seconds": 180,
+      "difficulty": "medium",
+      "objects": [
+        {
+          "asset_id": "red_shoe_01",
+          "prefab_path": "Prefabs/Items/RedShoe",
+          "difficulty": "easy",
+          "score": 20,
+          "order": 1,
+          "question": null
+        },
+        {
+          "asset_id": "teddy_bear_01",
+          "prefab_path": "Prefabs/Items/TeddyBear",
+          "difficulty": "easy",
+          "score": 25,
+          "order": 2,
+          "question": null
+        },
+        {
+          "asset_id": "headphones_01",
+          "prefab_path": "Prefabs/Items/Headphones",
+          "difficulty": "medium",
+          "score": 45,
+          "order": 3,
+          "question": null
+        },
+        {
+          "asset_id": "smartphone_01",
+          "prefab_path": "Prefabs/Items/Smartphone",
+          "difficulty": "medium",
+          "score": 55,
+          "order": 4,
+          "question": null
+        },
+        {
+          "asset_id": "key_01",
+          "prefab_path": "Prefabs/Items/Key",
+          "difficulty": "hard",
+          "score": 80,
+          "order": 5,
+          "question": null
+        }
+      ],
+      "max_score": 225,
+      "hints": {
+        "enabled": true,
+        "max_hints": 3
+      },
+      "win_condition": {
+        "type": "find_all_objects"
+      },
+      "reward": {
+        "type": "card",
+        "reward_id": "demo_card_01"
+      }
+    },
+    "assumptions": [
+      "Difficulty set to medium as not specified by user."
+    ],
+    "adaptations": [],
+    "personalization": [],
+    "alternatives": [],
+    "errors": [],
+    "meta": {
+      "model": "openai/gpt-oss-120b",
+      "attempts": 1,
+      "rejected_by": null,
+      "latency_ms": 3311,
+      "retrieval": {
+        "backend": "tfidf-char-ngrams",
+        "templates": [
+          {
+            "id": "hidden_objects",
+            "score": 0.537,
+            "keyword_match": true
+          },
+          {
+            "id": "quiz_hunt",
+            "score": 0.171,
+            "keyword_match": false
+          },
+          {
+            "id": "treasure_hunt",
+            "score": 0.076,
+            "keyword_match": false
+          }
+        ],
+        "environments": [
+          {
+            "id": "bedroom",
+            "score": 0.518,
+            "keyword_match": true
+          },
+          {
+            "id": "park",
+            "score": 0.06,
+            "keyword_match": false
+          },
+          {
+            "id": "v_shop",
+            "score": 0.034,
+            "keyword_match": false
+          }
+        ],
+        "assets": [
+          {
+            "id": "book_02",
+            "score": 0.06,
+            "keyword_match": false
+          },
+          {
+            "id": "smartphone_01",
+            "score": 0.045,
+            "keyword_match": false
+          },
+          {
+            "id": "key_01",
+            "score": 0.043,
+            "keyword_match": false
+          },
+          {
+            "id": "headphones_01",
+            "score": 0.026,
+            "keyword_match": false
+          },
+          {
+            "id": "red_shoe_01",
+            "score": 0.025,
+            "keyword_match": false
+          }
+        ]
+      }
+    }
+  }
+}
