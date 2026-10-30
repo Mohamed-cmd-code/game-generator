@@ -18,6 +18,7 @@ class Settings(BaseSettings):
     groq_model: str = "llama-3.3-70b-versatile"
     llm_temperature: float = 0.0
     llm_max_tokens: int = 2048
+    llm_reasoning_effort: str | None = None  # e.g. "low" for gpt-oss reasoning models; None disables
     llm_timeout_seconds: float = 30.0
     llm_max_retries: int = 2  # network-level retries handled by the Groq SDK
 
