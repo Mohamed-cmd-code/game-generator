@@ -1,0 +1,132 @@
+{
+  "catalog_version": "1.0.0",
+  "templates": [
+    {
+      "id": "hidden_objects",
+      "name": "Hidden Objects",
+      "description": "Search the scene and find specific hidden items before the timer runs out. Spot and seek objects hidden around the room.",
+      "tags": ["find", "search", "seek", "spot", "hidden", "hidden objects", "look for", "objects", "items"],
+      "compatible_environments": ["bedroom", "v_shop", "park"],
+      "win_condition": "find_all_objects"
+    },
+    {
+      "id": "treasure_hunt",
+      "name": "Treasure Hunt",
+      "description": "Follow a trail of clues and collect items one after another to reach a final treasure. An exploration adventure.",
+      "tags": ["treasure", "treasure hunt", "clues", "clue", "hunt", "explore", "adventure", "trail", "collect"],
+      "compatible_environments": ["bedroom", "v_shop", "park"],
+      "win_condition": "reach_treasure"
+    },
+    {
+      "id": "quiz_hunt",
+      "name": "Quiz Hunt",
+      "description": "Explore the scene and answer a quiz question linked to each object you find. Learn while you play trivia.",
+      "tags": ["quiz", "quiz hunt", "questions", "question", "trivia", "learn", "learning", "answer", "educational"],
+      "compatible_environments": ["bedroom", "v_shop", "park"],
+      "win_condition": "answer_all_questions"
+    }
+  ],
+  "environments": [
+    {
+      "id": "bedroom",
+      "name": "Bedroom",
+      "description": "A messy bedroom at home with a bed, a desk, a wardrobe and toys scattered on the floor. A kid's room.",
+      "tags": ["bedroom", "room", "home", "house", "indoor", "messy", "kid", "kids", "kids room", "kid's room", "child"],
+      "scene_path": "Scenes/Bedroom_01"
+    },
+    {
+      "id": "v_shop",
+      "name": "V-Shop",
+      "description": "A virtual shop with shelves, a counter and products on display. A store or boutique to browse.",
+      "tags": ["v-shop", "vshop", "v shop", "shop", "store", "mall", "boutique", "virtual shop", "market", "shelves"],
+      "scene_path": "Scenes/VShop_01"
+    },
+    {
+      "id": "park",
+      "name": "Park",
+      "description": "An outdoor city park with trees, benches, grass and a playground. Nature and fresh air.",
+      "tags": ["park", "outdoor", "outside", "garden", "nature", "playground", "trees", "city park"],
+      "scene_path": "Scenes/Park_01"
+    }
+  ],
+  "assets": [
+    {
+      "id": "red_shoe_01", "name": "Red Shoe", "difficulty": "easy",
+      "description": "A single bright red sneaker.",
+      "tags": ["shoe", "sneaker", "red shoe", "footwear"],
+      "environments": ["bedroom", "v_shop", "park"],
+      "prefab_path": "Prefabs/Items/RedShoe"
+    },
+    {
+      "id": "book_02", "name": "Book", "difficulty": "easy",
+      "description": "A colourful hardcover book.",
+      "tags": ["book", "novel", "reading"],
+      "environments": ["bedroom", "v_shop", "park"],
+      "prefab_path": "Prefabs/Items/Book"
+    },
+    {
+      "id": "teddy_bear_01", "name": "Teddy Bear", "difficulty": "easy",
+      "description": "A soft brown teddy bear toy.",
+      "tags": ["teddy", "teddy bear", "bear", "toy", "plush"],
+      "environments": ["bedroom", "v_shop", "park"],
+      "prefab_path": "Prefabs/Items/TeddyBear"
+    },
+    {
+      "id": "backpack_01", "name": "Backpack", "difficulty": "easy",
+      "description": "A blue school backpack.",
+      "tags": ["backpack", "bag", "schoolbag", "rucksack"],
+      "environments": ["bedroom", "v_shop", "park"],
+      "prefab_path": "Prefabs/Items/Backpack"
+    },
+    {
+      "id": "headphones_01", "name": "Headphones", "difficulty": "medium",
+      "description": "A pair of black over-ear headphones.",
+      "tags": ["headphones", "headset", "earphones", "music"],
+      "environments": ["bedroom", "v_shop"],
+      "prefab_path": "Prefabs/Items/Headphones"
+    },
+    {
+      "id": "smartphone_01", "name": "Smartphone", "difficulty": "medium",
+      "description": "A thin smartphone, often hidden under things.",
+      "tags": ["smartphone", "phone", "mobile", "cellphone"],
+      "environments": ["bedroom", "v_shop", "park"],
+      "prefab_path": "Prefabs/Items/Smartphone"
+    },
+    {
+      "id": "key_01", "name": "Key", "difficulty": "hard",
+      "description": "A small metal key, very easy to miss.",
+      "tags": ["key", "keys", "metal key"],
+      "environments": ["bedroom", "park"],
+      "prefab_path": "Prefabs/Items/Key"
+    }
+  ],
+  "rewards": [
+    {"id": "demo_card_01", "type": "card", "name": "Demo Card"}
+  ],
+  "rules": {
+    "duration_seconds": {"min": 30, "max": 180},
+    "hidden_objects": {"min": 1, "max": 10},
+    "hints": {"min": 0, "max": 5},
+    "difficulty": ["easy", "medium", "hard"],
+    "score_per_object": {"min": 10, "max": 100},
+    "score_by_difficulty": {"easy": [10, 30], "medium": [30, 60], "hard": [60, 100]},
+    "quiz_choices": {"min": 2, "max": 4}
+  },
+  "defaults": {
+    "game_template": "hidden_objects",
+    "environment": "bedroom",
+    "duration_seconds": 120,
+    "difficulty": "medium",
+    "object_count": 5,
+    "max_hints": 2,
+    "reward_id": "demo_card_01"
+  },
+  "unsupported_mechanics": [
+    {"label": "Racing", "terms": ["race", "races", "racing", "racer", "car", "cars", "formula 1", "formula one", "f1", "kart", "drift", "driving", "vehicle", "vehicles"]},
+    {"label": "Shooting", "terms": ["shoot", "shooting", "shooter", "gun", "guns", "weapon", "weapons", "sniper", "bullets"]},
+    {"label": "Combat / fighting", "terms": ["fight", "fighting", "combat", "battle", "battle royale", "boss fight", "kill", "zombies"]},
+    {"label": "Explosions / destruction", "terms": ["explosion", "explosions", "explode", "bomb", "bombs", "destroy"]},
+    {"label": "Platformer / sports", "terms": ["platformer", "jump and run", "football", "soccer", "basketball", "tennis"]},
+    {"label": "Multiplayer online", "terms": ["multiplayer", "pvp", "online match", "mmo"]}
+  ]
+}

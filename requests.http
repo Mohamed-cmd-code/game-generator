@@ -1,0 +1,44 @@
+### Sample calls - open in VS Code with the "REST Client" extension and click "Send Request"
+@base = http://127.0.0.1:8000
+
+### Health
+GET {{base}}/health
+
+### 1. Compatible request
+POST {{base}}/generate-game
+Content-Type: application/json
+
+{"prompt": "Create a game in a messy bedroom. The player must find 5 objects in less than 3 minutes. Harder objects should give more points. Add 3 hints and a reward at the end.", "player_id": "p_42"}
+
+### 2. Ambiguous request
+POST {{base}}/generate-game
+Content-Type: application/json
+
+{"prompt": "Make a fun little game for my kid."}
+
+### 3. Missing asset
+POST {{base}}/generate-game
+Content-Type: application/json
+
+{"prompt": "Hidden objects in the park: find a guitar, a cat and a key."}
+
+### 4. Unsupported mechanic
+POST {{base}}/generate-game
+Content-Type: application/json
+
+{"prompt": "Create a Formula 1 race in Tokyo with 40 cars and explosions."}
+
+### 5. Complex multi-constraint
+POST {{base}}/generate-game
+Content-Type: application/json
+
+{"prompt": "Treasure hunt in the V-Shop, hard, 8 objects including headphones and a smartphone, 4 minutes, 6 hints, and a card at the end."}
+
+### Bonus: send a gameplay event (replace game_id with one returned above)
+POST {{base}}/events
+Content-Type: application/json
+
+{"event": "player_failed", "reason": "time_expired", "game_id": "game_REPLACE_ME", "hints_used": 3, "objects_found": 3, "objects_total": 5}
+
+### Bonus: player profile
+GET {{base}}/players/p_42/profile
