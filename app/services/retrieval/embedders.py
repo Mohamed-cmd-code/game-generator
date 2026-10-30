@@ -44,7 +44,9 @@ class SentenceTransformerEmbedder:
         from sentence_transformers import SentenceTransformer  # heavy import, keep lazy
 
         self.name = f"sentence-transformers/{model_name}"
-        self._model = SentenceTransformer(model_name)
+        # Pin to CPU: by default SentenceTransformer grabs a GPU (CUDA/MPS) if one is
+        # present; device="cpu" keeps inference off the GPU for portable, deterministic runs.
+        self._model = SentenceTransformer(model_name, device="cpu")
 
     def fit(self, corpus: list[str]) -> None:  # pretrained: nothing to fit
         return None
